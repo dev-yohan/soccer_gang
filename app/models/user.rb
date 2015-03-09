@@ -30,6 +30,10 @@ class User
   field :provider,    type: String
   field :uid,    type: String
 
+  def name
+    "#{first_name} #{last_name}"
+  end
+
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time
@@ -46,7 +50,7 @@ class User
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.first_name = auth.info.first_name   # assuming the user model has a name
-      user.last_name = auth.info.first_name   # assuming the user model has a name
+      user.last_name = auth.info.last_name   # assuming the user model has a name
       user.facebook_avatar = auth.info.image # assuming the user model has an image
     end
   end
@@ -58,5 +62,7 @@ class User
       end
     end
   end
+
+
 
 end

@@ -1,0 +1,6 @@
+en:
+  user:
+    sign_in:
+      link: "Connect with Facebook"
+    sign_out:
+      link: "Logout"  
