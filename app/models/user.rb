@@ -30,6 +30,9 @@ class User
   field :provider,    type: String
   field :uid,    type: String
 
+  ## Basic Info
+  field :basic_info_wizard, type: Boolean, default: false
+
   def name
     "#{first_name} #{last_name}"
   end

@@ -36,10 +36,13 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# template system
 gem "haml"
 
-#mongo gems
+#application.yml
+gem "figaro"
 
+#mongo gems
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid_slug'
@@ -68,6 +71,9 @@ gem 'kaminari'
 #elasticsearch
 gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+
+# Consume REST services
+gem 'httparty'
 
 #code quality
 gem 'rubocop', require: false

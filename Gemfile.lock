@@ -85,13 +85,19 @@ GEM
     execjs (2.4.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.6)
     ffi (1.9.6-x86-mingw32)
+    figaro (1.1.0)
+      thor (~> 0.14)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     haml (4.0.6)
       tilt
     hashie (3.4.0)
     hike (1.2.3)
+    httparty (0.13.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.2.11)
       activesupport (>= 3.0.0, < 5)
@@ -270,7 +276,9 @@ DEPENDENCIES
   devise
   elasticsearch-model!
   elasticsearch-rails!
+  figaro
   haml
+  httparty
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
