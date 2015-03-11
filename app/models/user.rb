@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  after_create :suscribe_in_gamify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -66,6 +67,9 @@ class User
     end
   end
 
-
+  def suscribe_in_gamify
+    gamify = Gamify::Gamify.new
+    gamify.suscribe_user(ENV['gamify_app_id'], self.id, self.email, self.first_name, self.last_name, true)
+  end
 
 end
