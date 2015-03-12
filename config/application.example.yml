@@ -13,6 +13,7 @@ development:
   gamify_host: 127.0.0.1:3006
   gamify_app_id: 54fe6c0e596f6826d8000000
   gamify_app_token: uv9_Lu_atqlzavIHccDJMQ
+  gamify_sign_up_activity: 5501043a4d61631b22040000
 
 production:
   gamify_host: gamifyapp.com

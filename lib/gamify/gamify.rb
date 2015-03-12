@@ -32,4 +32,10 @@ class Gamify::Gamify
     puts response.body
   end
 
+  def log_activity(activity_id, external_id)
+    response = self.class.post("/api/v1/activity_logs", body: {id: activity_id, external_id: external_id}.to_json, headers: { 'Content-Type' => 'application/json' })
+    puts "GAMIFY RESPONSE"
+    puts response.body
+  end
+
 end
