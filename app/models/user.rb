@@ -73,4 +73,9 @@ class User
     gamify.log_activity(ENV['gamify_sign_up_activity'], self.id.to_s)
   end
 
+  def sign_in_in_gamify
+    gamify = Gamify::Gamify.new
+    gamify.log_activity(ENV['gamify_sign_in_activity'], self.id.to_s)
+  end
+
 end

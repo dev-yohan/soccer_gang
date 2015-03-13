@@ -38,4 +38,10 @@ class Gamify::Gamify
     puts response.body
   end
 
+  def user_badges(app_id, external_id)
+    response = self.class.get("/api/v1/user_badges/#{app_id}/#{external_id}")
+    puts "GAMIFY RESPONSE"
+    puts response.body
+  end
+
 end
