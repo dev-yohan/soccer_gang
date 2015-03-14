@@ -3,7 +3,7 @@ class Users::BadgesController < ApplicationController
 
   def index
     gamify = Gamify::Gamify.new
-    puts gamify.user_badges(ENV['gamify_app_id'], current_user.id)
+    @badges = gamify.user_badges(ENV['gamify_app_id'], current_user.id)
   end
 
 end

@@ -4892,6 +4892,13 @@ a.badge:focus {
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
+
+.badge_thumb
+{
+  min-height:230px;
+  max-height:230px;
+}
+
 .thumbnail > img,
 .thumbnail a > img {
   margin-left: auto;

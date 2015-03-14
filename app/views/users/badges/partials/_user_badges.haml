@@ -1,0 +1,13 @@
+= #badges.inspect
+%h2
+  = t('my_badges.title')
+- if !badges.nil?
+  - badges.each do |badge|
+    .col-md-4
+      .thumbnail.badge_thumb
+        %img{alt: badge["name"], src: badge["image"]}/
+        .caption
+          %strong
+            = badge["name"]
+            %span.badge
+              = t('my_badges.thumbnails.points', points: badge["points"])
