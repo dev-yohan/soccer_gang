@@ -8,6 +8,9 @@
         = t('breadcrumb.my_badges')
 
 .row
-  .col-md-6
+  .col-md-9
     .row
-      =  render :partial => 'users/badges/partials/user_badges', locals: { badges:@badges }
+      =  render :partial => 'users/badges/partials/user_badges', locals: { badges: @badges }
+
+  .col-md-3
+    =  render :partial => 'users/badges/partials/user_ranking', locals: { ranking: @rank20 }

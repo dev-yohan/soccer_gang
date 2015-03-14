@@ -4810,6 +4810,22 @@ a.label:focus {
   background-color: #158cba;
   border-radius: 10px;
 }
+
+.badge_green {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #28b62c;
+  border-radius: 10px;
+}
+
 .badge:empty {
   display: none;
 }

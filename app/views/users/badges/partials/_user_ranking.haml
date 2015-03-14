@@ -1,0 +1,18 @@
+%h2
+  = t('ranks.rank_20.title')
+
+- if !ranking.nil?
+  .list-group
+    - ranking.each do |ranked_user|
+      %a.list-group-item
+        .row
+          .col-md-3
+            - user = User.find(ranked_user['external_id'])
+            = image_tag(user.facebook_avatar, size: "40x40", alt: user.name)
+          .col-md-9
+            = user.name
+            %br
+            %span.badge
+              = t('ranks.points', points: ranked_user['points'])
+            %span.badge_green
+              = t('ranks.badges', badges: ranked_user['badges'])

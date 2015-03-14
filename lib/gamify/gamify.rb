@@ -40,7 +40,10 @@ class Gamify::Gamify
 
   def user_badges(app_id, external_id)
     response = self.class.get("/api/v1/user_badges/#{app_id}/#{external_id}")
-    response
+  end
+
+  def user_ranking(app_id, page, limit)
+    response = self.class.get("/api/v1/user_ranking/#{app_id}/#{page}/#{limit}")
   end
 
 end

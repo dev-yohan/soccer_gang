@@ -19,10 +19,10 @@
             %a{href: "/users/edit"}
               = image_tag(current_user.facebook_avatar, size: "23x25", alt: current_user.name)
               = current_user.name
-        %li
-          %a{href: user_badges_path}
-            = t("main_menu.my_badges")
 
         - if !current_user.nil?
+          %li
+            %a{href: user_badges_path}
+              = t("main_menu.my_badges")
           %li
             = link_to  t("user.sign_out.link"), destroy_user_session_path, method: :delete

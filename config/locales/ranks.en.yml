@@ -1,0 +1,6 @@
+en:
+  ranks:
+    rank_20:
+      title: "Top 20"
+    points: "%{points} points"
+    badges: "%{badges} badges" 
