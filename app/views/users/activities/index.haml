@@ -1,0 +1,13 @@
+.row
+  .bs-component
+    %ul.breadcrumb
+      %li
+        %a{href: '/'}
+          = t('breadcrumb.home')
+      %li.active
+        = t('breadcrumb.my_activities')
+
+.row
+  .col-md-9
+    .row
+      =  render :partial => 'users/activities/partials/user_activities', locals: { activities: @activities }

@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   match 'welcome/basic-info'=> 'customization/basic#step_basic_info', :as => :welcome_step1 , :via => :get
 
   #user badges
-  match 'my-badges'=> 'users/badges#index', :as => :user_badges , :via => :get 
+  match 'my-badges'=> 'users/badges#index', :as => :user_badges , :via => :get
+
+  #user activity log
+  match 'my-activities'=> 'users/activities#index', :as => :user_activities , :via => :get 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

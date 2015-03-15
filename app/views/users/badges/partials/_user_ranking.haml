@@ -3,14 +3,14 @@
 
 - if !ranking.nil?
   .list-group
-    - ranking.each do |ranked_user|
+    - ranking.each_with_index do |ranked_user, index|
       %a.list-group-item
         .row
           .col-md-3
             - user = User.find(ranked_user['external_id'])
             = image_tag(user.facebook_avatar, size: "40x40", alt: user.name)
           .col-md-9
-            = user.name
+            = "#{index + 1}. #{user.name}"
             %br
             %span.badge
               = t('ranks.points', points: ranked_user['points'])

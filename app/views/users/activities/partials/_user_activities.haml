@@ -1,0 +1,11 @@
+%h2
+  = t('my_activities.title')
+
+- if !activities.empty?
+
+  - activities.each do |activity|
+    %blockquote
+      %p
+        = activity['activity']['name']
+      %small
+        = activity['friendly_date']

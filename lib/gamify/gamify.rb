@@ -46,4 +46,8 @@ class Gamify::Gamify
     response = self.class.get("/api/v1/user_ranking/#{app_id}/#{page}/#{limit}")
   end
 
+  def user_activity_logs(external_id, page, limit)
+    response = self.class.get("/api/v1/user_activity_logs/#{external_id}/#{page}/#{limit}")
+  end
+
 end
