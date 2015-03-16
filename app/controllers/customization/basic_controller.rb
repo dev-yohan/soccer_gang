@@ -21,6 +21,7 @@ class Customization::BasicController < ApplicationController
     if @user.save
       @user.basic_info_wizard = true
       @user.save
+      @user.report_activity(ENV['gamify_basic_info_activity'])
       redirect_to "/", flash: {success: I18n.t("user_wizard.step_1.step_success")}
     else
       redirect_to welcome_step1_path, flash: {error: I18n.t("user_wizard.step_1.step_error")}
