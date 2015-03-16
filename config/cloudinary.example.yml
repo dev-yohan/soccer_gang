@@ -1,0 +1,10 @@
+development:
+  cloud_name: cloud121
+  api_key: '481234347766186'
+  api_secret: ba-PBYsm3dgnKSAhcPLNnF6hE1I
+  enhance_image_tag: true
+  static_image_support: false
+production:
+
+test:
+  

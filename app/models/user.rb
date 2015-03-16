@@ -81,7 +81,7 @@ class User
 
   def report_activity(activity_id)
     gamify = Gamify::Gamify.new
-    gamify.log_activity(ENV['activity_id'], self.id.to_s)
+    gamify.log_activity(activity_id, self.id.to_s)
   end
 
 end
