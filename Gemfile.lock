@@ -85,7 +85,6 @@ GEM
     execjs (2.4.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.6)
     ffi (1.9.6-x86-mingw32)
     figaro (1.1.0)
       thor (~> 0.14)
@@ -99,6 +98,13 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    i18n-country-translations (1.2.1)
+      i18n (~> 0.5)
+      railties (>= 3.0)
+    i18n_country_select (1.1.4)
+      i18n (~> 0.5)
+      i18n-country-translations (~> 1.0, >= 1.0.3)
+      unicode_utils (~> 1.0, >= 1.0.0)
     jbuilder (2.2.11)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -261,6 +267,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicode_utils (1.4.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -279,6 +286,7 @@ DEPENDENCIES
   figaro
   haml
   httparty
+  i18n_country_select
   jbuilder (~> 2.0)
   jquery-rails
   kaminari

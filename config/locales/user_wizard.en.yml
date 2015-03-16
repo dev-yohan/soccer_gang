@@ -1,0 +1,11 @@
+en:
+  user_wizard:
+    step_1:
+      title: "Step 1. General information"
+      email: "E-mail"
+      first_name: "First name"
+      last_name: "First name"
+      country: "Country"
+      next_btn: "Next step"
+      step_success: "Step 1 sucessfully saved"
+      step_error: "Error saving step 1"

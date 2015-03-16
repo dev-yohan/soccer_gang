@@ -39,6 +39,9 @@ gem 'spring',        group: :development
 # template system
 gem "haml"
 
+# country selector
+gem 'i18n_country_select'
+
 #application.yml
 gem "figaro"
 

@@ -1,0 +1,32 @@
+.row
+  .bs-component
+    %ul.breadcrumb
+      %li
+        %a{href: '/'}
+          = t('breadcrumb.home')
+      %li.active
+        = t('breadcrumb.user_wizard.step_1')
+
+.row
+  .col-md-12
+    %h2
+      = t('user_wizard.step_1.title')
+
+.row
+  .col-md-6
+    %br
+    = form_for @user, :as => "user_data", :url => save_step1_path, :html => { :multipart => true, :class => "bs-component" }, :method => :POST do |f|
+      .form-group
+        = f.label t('user_wizard.step_1.email'), :class => "control-label"
+        = f.text_field :first_name, :value => @user.email , :class => "form-control", :disabled => true
+      .form-group
+        = f.label t('user_wizard.step_1.first_name'), :class => "control-label"
+        = f.text_field :first_name, :value => @user.first_name , :class => "form-control", :required => true
+      .form-group
+        = f.label t('user_wizard.step_1.last_name'), :class => "control-label"
+        = f.text_field :last_name, :value => @user.last_name , :class => "form-control", :required => true
+      .form-group
+        = f.label t('user_wizard.step_1.country'), :class => "control-label"
+        = country_code_select(:user, :country)
+      .form-group
+        = f.submit t('user_wizard.step_1.next_btn'), :class => "btn btn-success"

@@ -3,3 +3,5 @@ en:
     home: "Home"
     my_badges: "My badges"
     my_activities: "My activities"
+    user_wizard:
+      step_1: "Step 1. General information"

@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   root 'home#index'
 
   match 'welcome/basic-info'=> 'customization/basic#step_basic_info', :as => :welcome_step1 , :via => :get
+  match 'welcome/basic-info'=> 'customization/basic#save_basic_info', :as => :save_step1 , :via => :post
 
   #user badges
   match 'my-badges'=> 'users/badges#index', :as => :user_badges , :via => :get
 
   #user activity log
-  match 'my-activities'=> 'users/activities#index', :as => :user_activities , :via => :get 
+  match 'my-activities'=> 'users/activities#index', :as => :user_activities , :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

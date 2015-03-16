@@ -12,6 +12,7 @@ class User
   field :facebook_avatar,              type: String
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
+  field :country,              type: String
 
   ## Recoverable
   field :reset_password_token,   type: String
