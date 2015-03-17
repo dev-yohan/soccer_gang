@@ -1,0 +1,21 @@
+.row
+  .bs-component
+    %ul.breadcrumb
+      %li
+        %a{href: '/'}
+          = t('breadcrumb.home')
+      %li.active
+        = t('breadcrumb.user_wizard.step_2')
+
+.row
+  .col-md-12
+    %h2
+      = t('user_wizard.step_2.title')
+
+.row
+  .col-md-3
+    - if !@positions.empty?
+      %ul.list-group
+        - @positions.each_with_index do |position, index|
+          %li.list-group-item
+            = position.name

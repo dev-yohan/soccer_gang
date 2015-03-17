@@ -9,3 +9,5 @@ en:
       next_btn: "Next step"
       step_success: "Step 1 sucessfully saved"
       step_error: "Error saving step 1"
+    step_2:
+      title: "Step 2. Your soccer skills"  

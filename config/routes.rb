@@ -5,8 +5,12 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  #customization step 1
   match 'welcome/basic-info'=> 'customization/basic#step_basic_info', :as => :welcome_step1 , :via => :get
   match 'welcome/basic-info'=> 'customization/basic#save_basic_info', :as => :save_step1 , :via => :post
+
+  #customization step 2
+  match 'welcome/your-soccer-skills'=> 'customization/skills#step_basic_skills', :as => :basic_skills_step2 , :via => :get
 
   #user badges
   match 'my-badges'=> 'users/badges#index', :as => :user_badges , :via => :get

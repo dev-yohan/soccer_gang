@@ -34,6 +34,7 @@ class User
 
   ## Basic Info
   field :basic_info_wizard, type: Boolean, default: false
+  field :soccer_skills_wizard, type: Boolean, default: false
 
   def name
     "#{first_name} #{last_name}"
