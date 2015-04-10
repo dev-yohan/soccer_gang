@@ -4,8 +4,7 @@ class HomeController < ApplicationController
     if !current_user.nil?
       if !current_user.basic_info_wizard?
         redirect_to welcome_step1_path
-      end
-      if !current_user.soccer_skills_wizard?
+      elsif !current_user.soccer_skills_wizard?
         redirect_to basic_skills_step2_path
       end
     end
